@@ -1,0 +1,118 @@
+/*** 
+
+====================================================================
+    Clients Section
+====================================================================
+
+***/
+
+.clients-section{
+    position: relative;
+    .float-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @media only screen and (max-width: 1599.98px) {
+            display: none;
+        }
+    }
+    .sponsors-outer {
+        border-top: 1px solid rgba($theme-color-dark, 0.1);    
+        padding: 45px 30px;
+    }
+    &.home2-style{
+        .client-text{
+            background-color: var(--theme-color2);
+            margin: 0;
+            padding: 45px 25px;
+            position: relative;
+            text-align: center;
+            h4{
+              margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.client-block{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    .image {
+        border-radius: 10px;
+        min-height: 130px;
+        overflow: hidden;
+        padding: 20px 20px;
+        position: relative;
+        text-align: center;
+        @include flex-center;
+        @include transition(all 300ms ease);
+        &:hover{
+            img {
+                &:first-child{
+                    transform: translateY(0) scaleY(1);
+                    opacity: 1;
+                    filter: blur(0);
+                }
+                &:nth-child(2){
+                    transform: translateY(-50%) scaleY(2);
+                    opacity: 0;
+                    filter: blur(10px);
+                }
+            }
+        }
+    }
+    img{
+        display: inline-block !important;
+        position:relative;
+        width: auto !important;
+        @include transition(all 500ms ease);
+        &:first-child{
+            bottom:0px;
+            filter: blur(10px);
+            left:0px;
+            margin: auto;
+            opacity: 0;
+            position:absolute;
+            right:0px;
+            top:0px;
+            transform: translateY(50%) scaleY(2);
+            z-index:1;
+        }
+    }
+}
+
+.clients-carousel{
+  position: relative;
+  .client-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .client-item {
+    a{
+      display: block;
+      padding: 35px 0;
+      position: relative;
+      transition: all 300ms ease;
+      &.active {
+        background-color: #ebeef5;
+      }
+    }
+    img {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+      opacity: 0.2;
+      transition: all 0.3s ease;
+      width: auto;
+    }
+    &:hover{
+      img {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+}

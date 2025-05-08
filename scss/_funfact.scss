@@ -1,0 +1,89 @@
+/*** 
+
+====================================================================
+    Fun Fact Section One
+====================================================================
+
+***/
+
+.fun-fact-section{
+    position: relative;
+    z-index: 9;
+    @media (max-width: 991.98px) {
+        padding: 0 0 90px;        
+    }
+    .fact-counter{
+        margin-bottom: -100px;
+        position: relative;
+        @media (max-width: 991.98px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.counter-block{
+    margin-bottom: 30px;
+    position: relative;
+    .inner {
+        padding-top: 40px;
+        position: relative;
+        transition: all 300ms ease;
+        &:hover {
+            .icon{
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    .content{
+        background-color: var(--theme-color-white);
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 210px;
+        padding: 60px 30px 30px;
+        position: relative;
+        text-align: center;
+    }
+    .icon {
+        background-color: var(--theme-color-light);
+        border-radius: 50%;
+        border: 2px solid var(--theme-color1);
+        color: var(--theme-color1);
+        @include flex-center;
+        font-size: 48px;
+        height: 80px;
+        left: 0px;
+        line-height: 1em;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: -40px;
+        width: 80px;
+        transition: all 300ms ease;
+    }
+    .count-box {
+        color: var(--theme-color2);
+        font-family: var(--title-font);
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -1.92px;
+        line-height: 58px;
+        margin-bottom: 0px;
+        .count-text {
+            color: var(--theme-color2);
+            font-family: var(--title-font);
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 58px;
+        }
+    }
+    .counter-title {
+        color: var(--text-color);
+        font-family: var(--text-font);
+        font-size: var(--body-font-size);
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 32px;
+        margin-bottom: 0;
+    }
+}
